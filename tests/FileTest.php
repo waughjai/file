@@ -20,6 +20,12 @@ class FileTest extends TestCase
 		$this->assertEquals( $file2->getLocalFilename(), '.gitignore' );
 	}
 
+	public function testBaseFilename()
+	{
+		$file = new File( 'run', 'exe', new Directory( 'C:\Program Files\Game' ) );
+		$this->assertEquals( $file->getBaseFilename(), 'run' );
+	}
+
 	public function testExtension()
 	{
 		$file = new File( 'run', 'exe', new Directory( 'C:\Program Files\Game' ) );

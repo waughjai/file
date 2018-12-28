@@ -33,6 +33,11 @@ namespace WaughJ\File
 			return ( $this->extension ) ? $this->filename . '.' . $this->extension : $this->filename;
 		}
 
+		public function getBaseFilename() : string
+		{
+			return $this->filename;
+		}
+
 		public function getExtension()
 		{
 			return $this->extension;
